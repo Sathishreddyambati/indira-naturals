@@ -26,9 +26,9 @@
   }
 
   body {
-    /* sand theme: soft light-sand centre fading to Sand #CBBD93 */
-    background-color: #cbbd93;
-    background-image: radial-gradient(ellipse at 50% 40%, #ddd2b1 0%, #d3c7a1 45%, #cbbd93 100%);
+    /* page background: soft white centre fading to pale green (blocks on top are Sand) */
+    background-color: #f3f7ec;
+    background-image: radial-gradient(ellipse at 50% 40%, #ffffff 0%, #f6f9f1 45%, #e9f1de 100%);
     background-attachment: fixed;
     color: var(--color-brand-charcoal);
   }
@@ -67,7 +67,7 @@
 
   /* frosted sand glass panel */
   .glass {
-    background: rgba(230, 220, 191, 0.62);
+    background: rgba(203, 189, 147, 0.9); /* Sand #CBBD93 */
     -webkit-backdrop-filter: blur(16px) saturate(130%);
     backdrop-filter: blur(16px) saturate(130%);
     border: 1px solid rgba(255, 250, 235, 0.45);
@@ -96,7 +96,7 @@
   z-index: 200;
   display: grid;
   place-items: center;
-  background: radial-gradient(ellipse at 50% 45%, #e6dcbf 0%, #cbbd93 100%);
+  background: #ffffff;
   animation: intro-out 0.6s ease 3.4s forwards;
 }
 .intro-splash .shine-logo {
