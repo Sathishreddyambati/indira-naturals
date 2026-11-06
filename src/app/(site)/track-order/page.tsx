@@ -87,7 +87,7 @@ export default function TrackOrderPage() {
       {error && <p className="mx-auto mt-4 max-w-xl text-center text-sm text-red-600">{error}</p>}
 
       {order && (
-        <div className="mx-auto mt-10 max-w-2xl rounded-2xl border border-brand-brown/10 bg-brand-sand-light p-6 shadow-card">
+        <div className="mx-auto mt-10 max-w-2xl rounded-2xl border border-brand-brown/10 bg-white p-6 shadow-card">
           <div className="flex flex-wrap items-center justify-between gap-2 border-b border-brand-brown/10 pb-4">
             <div>
               <p className="text-xs uppercase tracking-wide text-brand-charcoal/50">Order</p>
@@ -107,7 +107,7 @@ export default function TrackOrderPage() {
                 <div key={step} className="flex flex-1 flex-col items-center text-center">
                   <div
                     className={`grid h-8 w-8 place-items-center rounded-full text-xs font-bold ${
-                      i <= activeStepIndex ? "bg-brand-forest text-brand-ivory" : "bg-brand-sand text-brand-charcoal/40"
+                      i <= activeStepIndex ? "bg-brand-forest text-brand-ivory" : "bg-brand-cream text-brand-charcoal/40"
                     }`}
                   >
                     {i + 1}
@@ -119,7 +119,7 @@ export default function TrackOrderPage() {
           )}
 
           {order.trackingNumber && (
-            <p className="mb-4 rounded-lg bg-brand-sand p-3 text-sm">
+            <p className="mb-4 rounded-lg bg-brand-cream p-3 text-sm">
               Tracking Number: <span className="font-semibold">{order.trackingNumber}</span>
             </p>
           )}
@@ -127,7 +127,7 @@ export default function TrackOrderPage() {
           <ul className="flex flex-col gap-3 border-t border-brand-brown/10 pt-4">
             {order.items.map((item, i) => (
               <li key={i} className="flex items-center gap-3">
-                <div className="relative h-12 w-12 flex-shrink-0 overflow-hidden rounded-lg bg-brand-sand">
+                <div className="relative h-12 w-12 flex-shrink-0 overflow-hidden rounded-lg bg-brand-cream">
                   <Image src={item.productImage} alt={item.productName} fill sizes="48px" className="object-cover" />
                 </div>
                 <div className="flex-1 text-sm">

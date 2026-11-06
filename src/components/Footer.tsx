@@ -26,7 +26,7 @@ export default function Footer({ settings }: { settings: SiteSettingsDTO }) {
   const year = new Date().getFullYear();
   return (
     <footer className="relative mt-20">
-      <div className="glass border-x-0 border-b-0">
+      <div className="glass block-sand border-x-0 border-b-0">
         <div className="container-site grid grid-cols-1 gap-10 pb-6 pt-14 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1.2fr]">
           <div>
             <Image

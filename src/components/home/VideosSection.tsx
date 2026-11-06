@@ -39,7 +39,7 @@ export default function VideosSection({
                 ) : (
                   <div className="flex h-full flex-col items-center justify-center gap-3 p-4 text-center">
                     <Image src="/images/logo-sm.png" alt="" width={560} height={315} className="w-3/4 opacity-80" />
-                    <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-sand-light/80 px-3 py-1 text-xs font-semibold text-brand-forest">
+                    <span className="inline-flex items-center gap-1.5 rounded-full bg-white/80 px-3 py-1 text-xs font-semibold text-brand-forest">
                       <Video size={14} /> Video coming soon
                     </span>
                   </div>

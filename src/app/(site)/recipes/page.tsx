@@ -33,7 +33,7 @@ export default function RecipesPage() {
           <RevealOnScroll key={recipe.slug} delay={i * 0.06}>
             <Link
               href={`/recipes/${recipe.slug}`}
-              className="group block overflow-hidden rounded-2xl border border-brand-brown/10 bg-brand-sand-light shadow-card transition-shadow hover:shadow-card-hover"
+              className="group block overflow-hidden rounded-2xl border border-brand-brown/10 bg-white shadow-card transition-shadow hover:shadow-card-hover"
             >
               <div className="relative aspect-[16/10] overflow-hidden">
                 <Image
@@ -43,7 +43,7 @@ export default function RecipesPage() {
                   sizes="(min-width:1024px) 33vw, 90vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <span className="absolute left-3 top-3 rounded-full bg-brand-sand-light/90 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-brand-forest">
+                <span className="absolute left-3 top-3 rounded-full bg-brand-ivory/90 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-brand-forest">
                   {recipe.category}
                 </span>
               </div>

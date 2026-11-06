@@ -43,7 +43,7 @@ function SuccessContent() {
         will be sent to your email once our notification service is configured.
       </p>
 
-      <div className="mt-8 w-full max-w-lg rounded-2xl border border-brand-brown/10 bg-brand-sand-light p-6 text-left shadow-card">
+      <div className="mt-8 w-full max-w-lg rounded-2xl border border-brand-brown/10 bg-white p-6 text-left shadow-card">
         <div className="flex items-center justify-between border-b border-brand-brown/10 pb-4">
           <div>
             <p className="text-xs uppercase tracking-wide text-brand-charcoal/50">Order Number</p>
@@ -62,7 +62,7 @@ function SuccessContent() {
             <ul className="flex flex-col gap-3 py-4">
               {stored.items.map((item) => (
                 <li key={item.variantId} className="flex items-center gap-3">
-                  <div className="relative h-12 w-12 flex-shrink-0 overflow-hidden rounded-lg bg-brand-sand">
+                  <div className="relative h-12 w-12 flex-shrink-0 overflow-hidden rounded-lg bg-brand-cream">
                     <Image src={item.image} alt={item.name} fill sizes="48px" className="object-contain" />
                   </div>
                   <div className="flex-1 text-sm">

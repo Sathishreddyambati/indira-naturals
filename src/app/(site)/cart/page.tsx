@@ -14,7 +14,7 @@ export default function CartPage() {
   if (lines.length === 0) {
     return (
       <div className="container-site flex flex-col items-center justify-center gap-5 py-24 text-center">
-        <div className="grid h-24 w-24 place-items-center rounded-full bg-brand-sand text-brand-forest">
+        <div className="grid h-24 w-24 place-items-center rounded-full bg-brand-cream text-brand-forest">
           <ShoppingBag size={36} />
         </div>
         <h1 className="font-serif text-2xl text-brand-forest">Your cart is empty</h1>
@@ -32,10 +32,10 @@ export default function CartPage() {
     <div className="container-site py-10 lg:py-14">
       <h1 className="mb-8 font-serif text-3xl text-brand-forest">Your Cart</h1>
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_360px]">
-        <div className="flex flex-col divide-y divide-brand-brown/10 rounded-2xl border border-brand-brown/10 bg-brand-sand-light">
+        <div className="flex flex-col divide-y divide-brand-brown/10 rounded-2xl border border-brand-brown/10 bg-white">
           {lines.map((line) => (
             <div key={line.variantId} className="flex gap-4 p-4 sm:p-5">
-              <div className="relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-xl bg-brand-sand">
+              <div className="relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-xl bg-brand-cream">
                 <Image src={line.image} alt={line.name} fill sizes="96px" className="object-contain" />
               </div>
               <div className="flex flex-1 flex-col justify-between">
@@ -80,7 +80,7 @@ export default function CartPage() {
           ))}
         </div>
 
-        <div className="h-fit rounded-2xl border border-brand-brown/10 bg-brand-sand-light p-6 shadow-card">
+        <div className="h-fit rounded-2xl border border-brand-brown/10 bg-white p-6 shadow-card">
           <h2 className="mb-4 font-serif text-xl text-brand-forest">Order Summary</h2>
           <div className="mb-4 flex gap-2">
             <input

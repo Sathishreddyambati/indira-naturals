@@ -25,7 +25,7 @@ export default function CartDrawer() {
             role="dialog"
             aria-modal="true"
             aria-label="Shopping cart"
-            className="fixed right-0 top-0 z-[90] flex h-full w-full max-w-md flex-col bg-brand-sand-light shadow-2xl"
+            className="fixed right-0 top-0 z-[90] flex h-full w-full max-w-md flex-col bg-brand-ivory shadow-2xl"
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
@@ -36,7 +36,7 @@ export default function CartDrawer() {
               <button
                 onClick={closeDrawer}
                 aria-label="Close cart"
-                className="grid h-9 w-9 place-items-center rounded-full hover:bg-brand-sand"
+                className="grid h-9 w-9 place-items-center rounded-full hover:bg-brand-cream"
               >
                 <X size={18} />
               </button>
@@ -44,7 +44,7 @@ export default function CartDrawer() {
 
             {lines.length === 0 ? (
               <div className="flex flex-1 flex-col items-center justify-center gap-4 p-8 text-center">
-                <div className="grid h-20 w-20 place-items-center rounded-full bg-brand-sand text-brand-forest">
+                <div className="grid h-20 w-20 place-items-center rounded-full bg-brand-cream text-brand-forest">
                   <ShoppingBag size={32} />
                 </div>
                 <p className="font-serif text-lg text-brand-forest">Your cart is empty</p>
@@ -65,7 +65,7 @@ export default function CartDrawer() {
                   <ul className="flex flex-col gap-4">
                     {lines.map((line) => (
                       <li key={line.variantId} className="flex gap-3 border-b border-brand-brown/10 pb-4">
-                        <div className="relative h-20 w-20 flex-shrink-0 overflow-hidden rounded-xl bg-brand-sand-light">
+                        <div className="relative h-20 w-20 flex-shrink-0 overflow-hidden rounded-xl bg-white">
                           <Image src={line.image} alt={line.name} fill className="object-contain" sizes="80px" />
                         </div>
                         <div className="flex flex-1 flex-col gap-1">

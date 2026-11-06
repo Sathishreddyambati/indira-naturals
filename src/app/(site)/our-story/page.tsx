@@ -43,7 +43,7 @@ export default function AboutPage() {
           <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
             {WHY_WE_STARTED.map((s, i) => (
               <RevealOnScroll key={s.title} delay={i * 0.1}>
-                <div className="h-full rounded-2xl border border-brand-leaf/20 bg-brand-sand-light/70 p-6">
+                <div className="h-full rounded-2xl border border-brand-leaf/20 bg-white/70 p-6">
                   <span className="grid h-10 w-10 place-items-center rounded-full bg-brand-forest font-serif text-lg text-white">
                     {i + 1}
                   </span>
@@ -69,7 +69,7 @@ export default function AboutPage() {
           <div className="mt-8 grid grid-cols-2 gap-4 lg:grid-cols-3">
             {BENEFITS.map((b) => (
               <div key={b.title} className="flex items-center gap-3 rounded-xl bg-white/10 p-4">
-                <div className="grid h-10 w-10 flex-shrink-0 place-items-center rounded-full bg-brand-sand-light text-brand-forest">
+                <div className="grid h-10 w-10 flex-shrink-0 place-items-center rounded-full bg-white text-brand-forest">
                   <BrandIcon name={b.icon} size={18} />
                 </div>
                 <div>
@@ -121,12 +121,12 @@ export default function AboutPage() {
           <RevealOnScroll delay={0.1}>
             <div className="glass h-full rounded-2xl p-6">
               <h3 className="font-serif text-xl text-brand-forest">Three variants, four sizes</h3>
-              <div className="relative mt-4 aspect-[2/1] overflow-hidden rounded-xl bg-brand-sand-light">
+              <div className="relative mt-4 aspect-[2/1] overflow-hidden rounded-xl bg-white">
                 <Image src="/images/products/ginger-sizes.jpg" alt="Ginger powder pouches in 50g, 100g, 500g and 1kg" fill sizes="(min-width:1024px) 560px, 90vw" className="object-cover" />
               </div>
               <dl className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
                 {PACK_FACTS.map((f) => (
-                  <div key={f.title} className="rounded-xl bg-brand-sand-light/70 p-3">
+                  <div key={f.title} className="rounded-xl bg-white/70 p-3">
                     <dt className="text-xs font-semibold uppercase tracking-wide text-brand-leaf">{f.title}</dt>
                     <dd className="mt-1 text-sm text-brand-charcoal/80">{f.body}</dd>
                   </div>

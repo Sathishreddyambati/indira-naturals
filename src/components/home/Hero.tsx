@@ -22,7 +22,7 @@ export default function Hero({
 }) {
   return (
     <section className="container-site pt-6 lg:pt-10">
-      <div className="glass relative overflow-hidden rounded-[2rem]">
+      <div className="glass block-sand relative overflow-hidden rounded-[2rem]">
         {/* top theme art */}
         <div aria-hidden className="theme-fade-bottom absolute inset-x-0 top-0 h-[clamp(110px,16vw,260px)]">
           <Image src="/images/theme/top.jpg" alt="" fill priority sizes="100vw" className="object-cover object-bottom" />

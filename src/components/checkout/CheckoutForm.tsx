@@ -186,7 +186,7 @@ export default function CheckoutForm({
       <Script src="https://checkout.razorpay.com/v1/checkout.js" strategy="lazyOnload" />
       <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_380px]">
         <div className="flex flex-col gap-6">
-          <section className="rounded-2xl border border-brand-brown/10 bg-brand-sand-light p-6">
+          <section className="rounded-2xl border border-brand-brown/10 bg-white p-6">
             <h2 className="mb-4 font-serif text-xl text-brand-forest">Contact &amp; Shipping Details</h2>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <Field label="Full Name" error={errors.customerName}>
@@ -219,7 +219,7 @@ export default function CheckoutForm({
             </div>
           </section>
 
-          <section className="rounded-2xl border border-brand-brown/10 bg-brand-sand-light p-6">
+          <section className="rounded-2xl border border-brand-brown/10 bg-white p-6">
             <h2 className="mb-4 font-serif text-xl text-brand-forest">Payment Method</h2>
             <div className="flex flex-col gap-3">
               {razorpayEnabled && (
@@ -247,12 +247,12 @@ export default function CheckoutForm({
           </section>
         </div>
 
-        <aside className="h-fit rounded-2xl border border-brand-brown/10 bg-brand-sand-light p-6 shadow-card">
+        <aside className="h-fit rounded-2xl border border-brand-brown/10 bg-white p-6 shadow-card">
           <h2 className="mb-4 font-serif text-xl text-brand-forest">Order Summary</h2>
           <ul className="mb-4 flex max-h-64 flex-col gap-3 overflow-y-auto">
             {lines.map((line) => (
               <li key={line.variantId} className="flex items-center gap-3">
-                <div className="relative h-14 w-14 flex-shrink-0 overflow-hidden rounded-lg bg-brand-sand">
+                <div className="relative h-14 w-14 flex-shrink-0 overflow-hidden rounded-lg bg-brand-cream">
                   <Image src={line.image} alt={line.name} fill sizes="56px" className="object-contain" />
                 </div>
                 <div className="flex-1 text-sm">

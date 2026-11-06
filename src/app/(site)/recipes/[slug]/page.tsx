@@ -59,7 +59,7 @@ export default async function RecipeDetailPage({
           ))}
         </div>
 
-        <div className="mt-10 rounded-2xl bg-brand-sand p-6">
+        <div className="mt-10 rounded-2xl bg-brand-cream p-6">
           <p className="text-sm text-brand-charcoal/70">
             This article is general cooking inspiration, not medical or nutritional advice. Always check
             the specific usage and storage instructions on your product packaging.

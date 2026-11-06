@@ -23,8 +23,8 @@ export default function ProductCard({
   const wishlisted = isWishlisted(product.id);
 
   return (
-    <div className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-brand-brown/10 bg-brand-sand-light shadow-card transition-shadow duration-300 hover:shadow-card-hover">
-      <div className="relative aspect-[16/9] w-full overflow-hidden bg-brand-sand-light">
+    <div className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-brand-brown/10 bg-white shadow-card transition-shadow duration-300 hover:shadow-card-hover">
+      <div className="relative aspect-[16/9] w-full overflow-hidden bg-white">
         <Link href={`/product/${product.slug}`} className="block h-full w-full" aria-label={product.name}>
           <Image
             src={product.image}
@@ -61,7 +61,7 @@ export default function ProductCard({
           }
           aria-pressed={wishlisted}
           aria-label={wishlisted ? "Remove from wishlist" : "Add to wishlist"}
-          className="absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full bg-brand-sand-light/90 text-brand-forest shadow-sm transition-transform hover:scale-110"
+          className="absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full bg-white/90 text-brand-forest shadow-sm transition-transform hover:scale-110"
         >
           <Heart size={16} className={wishlisted ? "fill-brand-forest" : ""} />
         </button>
@@ -70,7 +70,7 @@ export default function ProductCard({
           <button
             type="button"
             onClick={() => onQuickView(product)}
-            className="absolute bottom-3 left-1/2 flex -translate-x-1/2 translate-y-10 items-center gap-1.5 rounded-full bg-brand-sand-light/95 px-4 py-2 text-xs font-semibold text-brand-forest opacity-0 shadow transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100"
+            className="absolute bottom-3 left-1/2 flex -translate-x-1/2 translate-y-10 items-center gap-1.5 rounded-full bg-brand-ivory/95 px-4 py-2 text-xs font-semibold text-brand-forest opacity-0 shadow transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100"
           >
             <Eye size={14} /> Quick View
           </button>
