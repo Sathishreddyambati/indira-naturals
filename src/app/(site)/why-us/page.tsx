@@ -62,7 +62,7 @@ export default function WhyUsPage() {
             {BENEFITS.map((b, i) => (
               <RevealOnScroll key={b.title} delay={i * 0.06}>
                 <div className="flex h-full gap-4 rounded-2xl bg-white/10 p-5">
-                  <div className="grid h-11 w-11 flex-shrink-0 place-items-center rounded-full bg-white text-brand-forest">
+                  <div className="grid h-11 w-11 flex-shrink-0 place-items-center rounded-full bg-brand-sand-light text-brand-forest">
                     <BrandIcon name={b.icon} size={20} />
                   </div>
                   <div>
@@ -86,7 +86,7 @@ export default function WhyUsPage() {
           {CERTIFICATES.map((c, i) => (
             <RevealOnScroll key={c.title} delay={i * 0.08}>
               <div className="glass flex h-full flex-col overflow-hidden rounded-2xl">
-                <div className="relative grid aspect-[4/3] place-items-center bg-white/60">
+                <div className="relative grid aspect-[4/3] place-items-center bg-brand-sand-light/60">
                   {c.image ? (
                     <Image src={c.image} alt={c.title} fill sizes="(min-width:640px) 33vw, 90vw" className="object-contain p-4" />
                   ) : (

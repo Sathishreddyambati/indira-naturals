@@ -139,7 +139,7 @@ export default async function ProductDetailPage({
             <ul className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
               {BENEFITS.map((b) => (
                 <li key={b.title} className="flex gap-3 rounded-xl bg-white/10 p-3">
-                  <span className="grid h-9 w-9 flex-shrink-0 place-items-center rounded-full bg-white text-brand-forest">
+                  <span className="grid h-9 w-9 flex-shrink-0 place-items-center rounded-full bg-brand-sand-light text-brand-forest">
                     <BrandIcon name={b.icon} size={16} />
                   </span>
                   <span>

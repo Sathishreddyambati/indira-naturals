@@ -11,7 +11,7 @@ export default function ProductGrid({ products }: { products: ProductDTO[] }) {
 
   if (products.length === 0) {
     return (
-      <div className="rounded-2xl border border-dashed border-brand-brown/30 bg-white/50 p-12 text-center text-brand-charcoal/60">
+      <div className="rounded-2xl border border-dashed border-brand-brown/30 bg-brand-sand-light/50 p-12 text-center text-brand-charcoal/60">
         No products match your filters right now. Try adjusting your search or filters.
       </div>
     );

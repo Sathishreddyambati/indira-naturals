@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
+import ShineLogo from "@/components/ShineLogo";
 
 const POINTS = ["100% Pure & Natural", "No Preservatives", "No Additives"];
 
@@ -33,14 +34,7 @@ export default function Hero({
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
-            <Image
-              src="/images/logo-sm.png"
-              alt="Indira Naturals — Pure, Fresh, Natural"
-              width={560}
-              height={315}
-              priority
-              className="logo-glow h-auto w-[min(100%,340px)]"
-            />
+            <ShineLogo priority loop delay={1.2} className="logo-glow w-[min(100%,340px)]" imgClassName="h-auto w-full" />
             <h1 className="mt-5 font-serif text-balance text-[clamp(2rem,4.4vw,3.4rem)] font-semibold leading-[1.08] text-brand-forest">
               {headline}
             </h1>
@@ -49,7 +43,7 @@ export default function Hero({
               {POINTS.map((p) => (
                 <li
                   key={p}
-                  className="inline-flex items-center gap-1.5 rounded-full border border-brand-leaf/30 bg-white/70 px-3 py-1.5 text-xs font-semibold text-brand-forest"
+                  className="inline-flex items-center gap-1.5 rounded-full border border-brand-leaf/30 bg-brand-sand-light/70 px-3 py-1.5 text-xs font-semibold text-brand-forest"
                 >
                   <Check size={14} className="text-brand-leaf" /> {p}
                 </li>
@@ -64,7 +58,7 @@ export default function Hero({
               </Link>
               <Link
                 href="/our-story"
-                className="rounded-full border border-brand-forest/40 bg-white/60 px-7 py-3.5 text-sm font-semibold text-brand-forest transition-colors hover:bg-brand-forest hover:text-brand-ivory"
+                className="rounded-full border border-brand-forest/40 bg-brand-sand-light/60 px-7 py-3.5 text-sm font-semibold text-brand-forest transition-colors hover:bg-brand-forest hover:text-brand-ivory"
               >
                 {ctaSecondary}
               </Link>

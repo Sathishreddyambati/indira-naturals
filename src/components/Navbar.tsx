@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Heart, Menu, Search, ShoppingBag, User, X } from "lucide-react";
 import { useCart } from "@/lib/cart-context";
+import ShineLogo from "@/components/ShineLogo";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
@@ -41,13 +42,13 @@ export default function Navbar() {
     <header
       className={`sticky top-0 z-50 w-full border-b transition-all duration-300 ${
         scrolled
-          ? "border-white/70 bg-white/70 shadow-sm backdrop-blur-xl"
-          : "border-white/60 bg-white/55 backdrop-blur-md"
+          ? "border-brand-brown/15 bg-brand-sand-light/80 shadow-sm backdrop-blur-xl"
+          : "border-brand-brown/10 bg-brand-sand-light/65 backdrop-blur-md"
       }`}
     >
       <div className="container-site flex h-20 items-center justify-between gap-4">
         <button
-          className="grid h-10 w-10 place-items-center rounded-full hover:bg-brand-cream lg:hidden"
+          className="grid h-10 w-10 place-items-center rounded-full hover:bg-brand-sand lg:hidden"
           onClick={() => setMobileOpen(true)}
           aria-label="Open menu"
         >
@@ -55,14 +56,7 @@ export default function Navbar() {
         </button>
 
         <Link href="/" className="flex items-center gap-2" aria-label="Indira Naturals home">
-          <Image
-            src="/images/logo-sm.png"
-            alt="Indira Naturals — Pure, Fresh, Natural"
-            width={560}
-            height={315}
-            priority
-            className="logo-glow h-14 w-auto object-contain sm:h-16"
-          />
+          <ShineLogo priority loop delay={3.5} className="logo-glow" imgClassName="h-14 w-auto object-contain sm:h-16" />
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">
@@ -79,7 +73,7 @@ export default function Navbar() {
 
         <div className="flex items-center gap-1 sm:gap-2">
           <button
-            className="grid h-10 w-10 place-items-center rounded-full hover:bg-brand-cream"
+            className="grid h-10 w-10 place-items-center rounded-full hover:bg-brand-sand"
             onClick={() => setSearchOpen((s) => !s)}
             aria-label="Search products"
           >
@@ -87,14 +81,14 @@ export default function Navbar() {
           </button>
           <Link
             href="/track-order"
-            className="hidden h-10 w-10 place-items-center rounded-full hover:bg-brand-cream sm:grid"
+            className="hidden h-10 w-10 place-items-center rounded-full hover:bg-brand-sand sm:grid"
             aria-label="Track order / account"
           >
             <User size={19} />
           </Link>
           <Link
             href="/wishlist"
-            className="relative hidden h-10 w-10 place-items-center rounded-full hover:bg-brand-cream sm:grid"
+            className="relative hidden h-10 w-10 place-items-center rounded-full hover:bg-brand-sand sm:grid"
             aria-label={`Wishlist (${wishlist.length} items)`}
           >
             <Heart size={19} />
@@ -105,7 +99,7 @@ export default function Navbar() {
             )}
           </Link>
           <button
-            className="relative grid h-10 w-10 place-items-center rounded-full hover:bg-brand-cream"
+            className="relative grid h-10 w-10 place-items-center rounded-full hover:bg-brand-sand"
             onClick={openDrawer}
             aria-label={`Cart (${itemCount} items)`}
           >
@@ -120,7 +114,7 @@ export default function Navbar() {
       </div>
 
       {searchOpen && (
-        <div className="border-t border-brand-brown/10 bg-brand-ivory px-4 py-3">
+        <div className="border-t border-brand-brown/10 bg-brand-sand-light px-4 py-3">
           <form onSubmit={handleSearchSubmit} className="container-site flex items-center gap-2">
             <Search size={18} className="text-brand-charcoal/50" />
             <input
@@ -141,7 +135,7 @@ export default function Navbar() {
       {mobileOpen && (
         <div className="fixed inset-0 z-[100] lg:hidden">
           <div className="absolute inset-0 bg-brand-charcoal/50" onClick={() => setMobileOpen(false)} />
-          <div className="absolute left-0 top-0 flex h-full w-72 flex-col gap-1 bg-brand-ivory p-6 shadow-2xl">
+          <div className="absolute left-0 top-0 flex h-full w-72 flex-col gap-1 bg-brand-sand-light p-6 shadow-2xl">
             <div className="mb-6 flex items-center justify-between">
               <Image src="/images/logo-sm.png" alt="Indira Naturals" width={560} height={315} className="h-12 w-auto" />
               <button onClick={() => setMobileOpen(false)} aria-label="Close menu">
@@ -153,7 +147,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="rounded-lg px-3 py-3 text-base font-medium text-brand-charcoal hover:bg-brand-cream"
+                className="rounded-lg px-3 py-3 text-base font-medium text-brand-charcoal hover:bg-brand-sand"
               >
                 {link.label}
               </Link>
@@ -161,14 +155,14 @@ export default function Navbar() {
             <Link
               href="/wishlist"
               onClick={() => setMobileOpen(false)}
-              className="rounded-lg px-3 py-3 text-base font-medium text-brand-charcoal hover:bg-brand-cream"
+              className="rounded-lg px-3 py-3 text-base font-medium text-brand-charcoal hover:bg-brand-sand"
             >
               Wishlist
             </Link>
             <Link
               href="/track-order"
               onClick={() => setMobileOpen(false)}
-              className="rounded-lg px-3 py-3 text-base font-medium text-brand-charcoal hover:bg-brand-cream"
+              className="rounded-lg px-3 py-3 text-base font-medium text-brand-charcoal hover:bg-brand-sand"
             >
               Track Order
             </Link>

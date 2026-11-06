@@ -13,6 +13,8 @@
   --color-brand-charcoal: #242820;
   --color-brand-white: #ffffff;
   --color-brand-gold: #c9922f;
+  --color-brand-sand: #cbbd93;
+  --color-brand-sand-light: #e6dcbf;
 
   --shadow-card: 0 12px 32px rgba(23, 77, 42, 0.08);
   --shadow-card-hover: 0 20px 48px rgba(23, 77, 42, 0.14);
@@ -24,9 +26,9 @@
   }
 
   body {
-    /* glassy white & green theme: soft white centre fading to pale green */
-    background-color: #f3f7ec;
-    background-image: radial-gradient(ellipse at 50% 40%, #ffffff 0%, #f6f9f1 45%, #e9f1de 100%);
+    /* sand theme: soft light-sand centre fading to Sand #CBBD93 */
+    background-color: #cbbd93;
+    background-image: radial-gradient(ellipse at 50% 40%, #ddd2b1 0%, #d3c7a1 45%, #cbbd93 100%);
     background-attachment: fixed;
     color: var(--color-brand-charcoal);
   }
@@ -63,13 +65,13 @@
     }
   }
 
-  /* frosted white glass panel */
+  /* frosted sand glass panel */
   .glass {
-    background: rgba(255, 255, 255, 0.58);
-    -webkit-backdrop-filter: blur(16px) saturate(140%);
-    backdrop-filter: blur(16px) saturate(140%);
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    box-shadow: 0 18px 48px rgba(23, 77, 42, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    background: rgba(230, 220, 191, 0.62);
+    -webkit-backdrop-filter: blur(16px) saturate(130%);
+    backdrop-filter: blur(16px) saturate(130%);
+    border: 1px solid rgba(255, 250, 235, 0.45);
+    box-shadow: 0 18px 48px rgba(70, 55, 20, 0.14), inset 0 1px 0 rgba(255, 250, 235, 0.5);
   }
 
   /* frosted green glass panel */
@@ -94,8 +96,11 @@
   z-index: 200;
   display: grid;
   place-items: center;
-  background: #ffffff;
-  animation: intro-out 0.6s ease 2.7s forwards;
+  background: radial-gradient(ellipse at 50% 45%, #e6dcbf 0%, #cbbd93 100%);
+  animation: intro-out 0.6s ease 3.4s forwards;
+}
+.intro-splash .shine-logo {
+  width: min(78vw, 520px);
 }
 .intro-seen .intro-splash {
   display: none;
@@ -122,6 +127,63 @@
     filter: drop-shadow(0 0 10px rgba(111, 174, 79, 0.7)) drop-shadow(0 0 26px rgba(111, 174, 79, 0.45));
   }
 }
+/* ---------- Logo shine: a band of light sweeps left to right over the logo only ---------- */
+.shine-logo {
+  position: relative;
+  display: inline-block;
+  line-height: 0;
+}
+.shine-logo > .shine-sweep {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  /* the logo itself is the mask, so only its letters and leaves light up */
+  -webkit-mask-image: var(--shine-mask);
+  mask-image: var(--shine-mask);
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  background: linear-gradient(
+    110deg,
+    transparent 0%,
+    transparent 45%,
+    rgba(255, 255, 255, 0.25) 47.5%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 255, 255, 0.25) 52.5%,
+    transparent 55%,
+    transparent 100%
+  );
+  background-size: 300% 100%;
+  background-repeat: no-repeat;
+  background-position: 150% 0;
+  opacity: 0.8;
+  animation: shine-sweep var(--shine-duration, 1.4s) ease-in-out var(--shine-delay, 0.3s) 1 both;
+}
+/* repeating version: one sweep, then a pause, forever */
+.shine-logo.shine-loop > .shine-sweep {
+  animation: shine-loop 6s ease-in-out var(--shine-delay, 1s) infinite both;
+}
+@keyframes shine-sweep {
+  from {
+    background-position: 150% 0;
+  }
+  to {
+    background-position: -50% 0;
+  }
+}
+@keyframes shine-loop {
+  0% {
+    background-position: 150% 0;
+  }
+  25%,
+  100% {
+    background-position: -50% 0;
+  }
+}
+/* the intro logo is revealed by the fill, so its img uses the fill animation */
+.intro-splash .shine-logo > img {
+  width: 100%;
+}
+
 @keyframes intro-out {
   to {
     opacity: 0;

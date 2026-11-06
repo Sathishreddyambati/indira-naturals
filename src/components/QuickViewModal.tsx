@@ -48,17 +48,17 @@ export default function QuickViewModal({
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
             onClick={(e) => e.stopPropagation()}
-            className="relative grid max-h-[88vh] w-full max-w-3xl grid-cols-1 overflow-y-auto rounded-2xl bg-white shadow-2xl sm:grid-cols-2"
+            className="relative grid max-h-[88vh] w-full max-w-3xl grid-cols-1 overflow-y-auto rounded-2xl bg-brand-sand-light shadow-2xl sm:grid-cols-2"
           >
             <button
               onClick={handleClose}
               aria-label="Close quick view"
-              className="absolute right-4 top-4 z-10 grid h-9 w-9 place-items-center rounded-full bg-white/90 text-brand-charcoal shadow"
+              className="absolute right-4 top-4 z-10 grid h-9 w-9 place-items-center rounded-full bg-brand-sand-light/90 text-brand-charcoal shadow"
             >
               <X size={18} />
             </button>
 
-            <div className="relative aspect-[16/9] bg-white sm:aspect-auto">
+            <div className="relative aspect-[16/9] bg-brand-sand-light sm:aspect-auto">
               <Image src={product.image} alt={product.name} fill className="object-contain" sizes="400px" />
             </div>
 

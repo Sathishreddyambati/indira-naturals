@@ -221,7 +221,7 @@ export default function ShopClient({ products }: { products: ProductDTO[] }) {
       {filtersOpen && (
         <div className="fixed inset-0 z-[100] lg:hidden">
           <div className="absolute inset-0 bg-brand-charcoal/50" onClick={() => setFiltersOpen(false)} />
-          <div className="absolute right-0 top-0 h-full w-80 max-w-[85vw] overflow-y-auto bg-brand-ivory p-6 shadow-2xl">
+          <div className="absolute right-0 top-0 h-full w-80 max-w-[85vw] overflow-y-auto bg-brand-sand-light p-6 shadow-2xl">
             <div className="mb-6 flex items-center justify-between">
               <h2 className="font-serif text-xl text-brand-forest">Filters</h2>
               <button onClick={() => setFiltersOpen(false)} aria-label="Close filters">

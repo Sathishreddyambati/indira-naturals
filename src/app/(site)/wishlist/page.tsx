@@ -12,7 +12,7 @@ export default function WishlistPage() {
   if (wishlist.length === 0) {
     return (
       <div className="container-site flex flex-col items-center gap-4 py-24 text-center">
-        <div className="grid h-24 w-24 place-items-center rounded-full bg-brand-cream text-brand-forest">
+        <div className="grid h-24 w-24 place-items-center rounded-full bg-brand-sand text-brand-forest">
           <Heart size={32} />
         </div>
         <h1 className="font-serif text-2xl text-brand-forest">Your wishlist is empty</h1>
@@ -29,8 +29,8 @@ export default function WishlistPage() {
       <h1 className="mb-8 font-serif text-3xl text-brand-forest">Your Wishlist</h1>
       <div className="grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-3 lg:grid-cols-4">
         {wishlist.map((item) => (
-          <div key={item.productId} className="overflow-hidden rounded-2xl border border-brand-brown/10 bg-white shadow-card">
-            <Link href={`/product/${item.slug}`} className="relative block aspect-square overflow-hidden bg-brand-cream">
+          <div key={item.productId} className="overflow-hidden rounded-2xl border border-brand-brown/10 bg-brand-sand-light shadow-card">
+            <Link href={`/product/${item.slug}`} className="relative block aspect-square overflow-hidden bg-brand-sand">
               <Image src={item.image} alt={item.name} fill sizes="25vw" className="object-contain" />
             </Link>
             <div className="p-4">

@@ -10,7 +10,7 @@ function StepRow({ steps, offset }: { steps: typeof PROCESS_STEPS; offset: numbe
       <div aria-hidden className="absolute left-[12%] right-[12%] top-9 hidden border-t-2 border-dashed border-white/30 sm:block" />
       {steps.map((step, i) => (
         <RevealOnScroll key={step.title} delay={i * 0.08} className="relative flex flex-col items-center text-center">
-          <div className="relative grid h-[72px] w-[72px] place-items-center rounded-full bg-white/95 text-brand-forest shadow-lg">
+          <div className="relative grid h-[72px] w-[72px] place-items-center rounded-full bg-brand-sand-light/95 text-brand-forest shadow-lg">
             <BrandIcon name={step.icon} size={28} />
             <span className="absolute -right-1 -top-1 grid h-6 w-6 place-items-center rounded-full bg-brand-gold text-xs font-bold text-white">
               {offset + i + 1}
@@ -45,7 +45,7 @@ export default function ProcessSection() {
         </div>
 
         <RevealOnScroll className="mt-12 grid grid-cols-1 items-center gap-6 rounded-2xl bg-white/10 p-5 sm:grid-cols-[auto_1fr]">
-          <div className="relative mx-auto h-28 w-48 overflow-hidden rounded-xl bg-white/90 sm:mx-0">
+          <div className="relative mx-auto h-28 w-48 overflow-hidden rounded-xl bg-brand-sand-light/90 sm:mx-0">
             <Image src="/images/products/ginger-garlic-photo-wide.jpg" alt="Fresh ginger and garlic with ginger garlic powder" fill sizes="192px" className="object-cover" />
           </div>
           <p className="text-center text-white sm:text-left">
