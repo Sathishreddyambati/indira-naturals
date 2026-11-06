@@ -1,0 +1,173 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
+
+  --color-brand-forest: #174d2a;
+  --color-brand-leaf: #4f8b35;
+  --color-brand-leaf-light: #6fae4f;
+  --color-brand-ivory: #faf7ef;
+  --color-brand-cream: #f2ebdd;
+  --color-brand-brown: #805331;
+  --color-brand-charcoal: #242820;
+  --color-brand-white: #ffffff;
+  --color-brand-gold: #c9922f;
+
+  --shadow-card: 0 12px 32px rgba(23, 77, 42, 0.08);
+  --shadow-card-hover: 0 20px 48px rgba(23, 77, 42, 0.14);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    /* glassy white & green theme: soft white centre fading to pale green */
+    background-color: #f3f7ec;
+    background-image: radial-gradient(ellipse at 50% 40%, #ffffff 0%, #f6f9f1 45%, #e9f1de 100%);
+    background-attachment: fixed;
+    color: var(--color-brand-charcoal);
+  }
+
+  ::selection {
+    background-color: var(--color-brand-leaf);
+    color: white;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand-leaf);
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .container-site {
+    width: 100%;
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  @media (min-width: 1024px) {
+    .container-site {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+  }
+
+  /* frosted white glass panel */
+  .glass {
+    background: rgba(255, 255, 255, 0.58);
+    -webkit-backdrop-filter: blur(16px) saturate(140%);
+    backdrop-filter: blur(16px) saturate(140%);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 18px 48px rgba(23, 77, 42, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  }
+
+  /* frosted green glass panel */
+  .glass-green {
+    background: linear-gradient(135deg, rgba(23, 77, 42, 0.92), rgba(47, 110, 52, 0.88));
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 24px 60px rgba(23, 77, 42, 0.25);
+  }
+
+  /* glow that follows the logo's shapes, not its box */
+  .logo-glow {
+    filter: drop-shadow(0 0 6px rgba(111, 174, 79, 0.55)) drop-shadow(0 0 18px rgba(111, 174, 79, 0.35));
+  }
+}
+
+/* ---------- Opening logo animation ---------- */
+.intro-splash {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: grid;
+  place-items: center;
+  background: #ffffff;
+  animation: intro-out 0.6s ease 2.7s forwards;
+}
+.intro-seen .intro-splash {
+  display: none;
+}
+.intro-logo {
+  width: min(78vw, 520px);
+  height: auto;
+  clip-path: inset(0 100% 0 0);
+  animation:
+    intro-fill 1.8s cubic-bezier(0.65, 0, 0.35, 1) 0.2s forwards,
+    intro-glow 1.2s ease-in-out 1.9s 1 both;
+}
+@keyframes intro-fill {
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+@keyframes intro-glow {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 0 rgba(111, 174, 79, 0));
+  }
+  50% {
+    filter: drop-shadow(0 0 10px rgba(111, 174, 79, 0.7)) drop-shadow(0 0 26px rgba(111, 174, 79, 0.45));
+  }
+}
+@keyframes intro-out {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* ---------- Theme borders (top & bottom village art) ---------- */
+.theme-fade-bottom {
+  -webkit-mask-image: linear-gradient(to bottom, #000 60%, transparent);
+  mask-image: linear-gradient(to bottom, #000 60%, transparent);
+}
+.theme-fade-top {
+  -webkit-mask-image: linear-gradient(to top, #000 65%, transparent);
+  mask-image: linear-gradient(to top, #000 65%, transparent);
+}
+
+/* hide scrollbar on the video strip */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* line-clamp utilities (fallback if plugin unavailable) */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

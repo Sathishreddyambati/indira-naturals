@@ -1,0 +1,19 @@
+# dependencies
+node_modules/
+
+# Next.js build output
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+
+# secrets: never commit real env files
+.env
+.env.*
+!.env.example
+
+# local tooling
+.claude/
+*.log
+.DS_Store
+Thumbs.db
