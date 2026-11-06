@@ -166,8 +166,8 @@ export default function ShopClient({ products }: { products: ProductDTO[] }) {
           <h1 className="font-serif text-3xl text-brand-forest">Shop Our Products</h1>
           <p className="mt-1 text-sm text-brand-charcoal/60">{filtered.length} products</p>
         </div>
-        <div className="flex items-center gap-3">
-          <div className="relative flex-1 sm:w-72">
+        <div className="flex w-full flex-wrap items-center gap-3 sm:w-auto">
+          <div className="relative min-w-0 flex-1 basis-full sm:basis-auto sm:w-72">
             <input
               value={query}
               onChange={(e) => {

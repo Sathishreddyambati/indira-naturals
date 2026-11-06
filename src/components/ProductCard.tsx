@@ -24,7 +24,7 @@ export default function ProductCard({
 
   return (
     <div className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-brand-brown/10 bg-white shadow-card transition-shadow duration-300 hover:shadow-card-hover">
-      <div className="relative aspect-[16/9] w-full overflow-hidden bg-white">
+      <div className="relative aspect-square w-full overflow-hidden bg-white">
         <Link href={`/product/${product.slug}`} className="block h-full w-full" aria-label={product.name}>
           <Image
             src={product.image}

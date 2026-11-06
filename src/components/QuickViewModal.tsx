@@ -58,7 +58,7 @@ export default function QuickViewModal({
               <X size={18} />
             </button>
 
-            <div className="relative aspect-[16/9] bg-white sm:aspect-auto">
+            <div className="relative aspect-square bg-white sm:aspect-auto">
               <Image src={product.image} alt={product.name} fill className="object-contain" sizes="400px" />
             </div>
 
