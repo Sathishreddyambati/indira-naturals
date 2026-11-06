@@ -16,7 +16,8 @@ export default async function SiteLayout({ children }: { children: ReactNode }) 
       {/* Logo watermark fixed behind the page while scrolling */}
       <div
         aria-hidden
-        className="pointer-events-none fixed inset-0 -z-10 bg-[url('/images/logo-sm.png')] bg-[length:min(70vw,760px)_auto] bg-center bg-no-repeat opacity-[0.07]"
+        className="pointer-events-none fixed inset-0 -z-10 bg-[length:min(70vw,760px)_auto] bg-center bg-no-repeat opacity-[0.07]"
+        style={{ backgroundImage: `url('${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/logo-sm.png')` }}
       />
 
       <AnnouncementBar text={settings.announcementText} />

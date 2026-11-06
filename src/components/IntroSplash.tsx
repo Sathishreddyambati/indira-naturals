@@ -11,7 +11,7 @@ export default function IntroSplash() {
       />
       <div className="intro-splash" aria-hidden>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/images/logo-sm.png" alt="" className="intro-logo" />
+        <img src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/logo-sm.png`} alt="" className="intro-logo" />
       </div>
     </>
   );

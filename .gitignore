@@ -17,3 +17,6 @@ next-env.d.ts
 *.log
 .DS_Store
 Thumbs.db
+
+# GitHub Pages build output
+out/
