@@ -122,7 +122,7 @@ export default function Navbar() {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               type="search"
-              placeholder="Search for ginger, garlic or ginger garlic powder..."
+              placeholder="Search for ginger, garlic, onion or tomato powder..."
               className="w-full bg-transparent py-1 text-sm outline-none placeholder:text-brand-charcoal/40"
             />
             <button type="submit" className="text-sm font-semibold text-brand-forest">

@@ -6,7 +6,7 @@ import { getAllPublishedProducts } from "@/db/queries";
 export const metadata: Metadata = {
   title: "Shop",
   description:
-    "Shop Indira Naturals ginger, garlic and ginger garlic powders and the Pack of 3 gift box — 100% pure, no preservatives, no additives.",
+    "Shop Indira Naturals ginger, garlic, ginger garlic, onion and tomato powders — 100% pure, no preservatives, no additives.",
   alternates: { canonical: "/shop" },
 };
 

@@ -37,7 +37,7 @@ export default function Footer({ settings }: { settings: SiteSettingsDTO }) {
               className="logo-glow h-20 w-auto object-contain"
             />
             <p className="mt-4 max-w-xs text-sm text-brand-charcoal/75">
-              100% pure ginger and garlic powders, made only by drying. No preservatives, no additives.
+              100% pure ginger, garlic, onion and tomato powders, made only by drying. No preservatives, no additives.
             </p>
             <p className="mt-2 text-sm font-semibold text-brand-forest">{TAGLINE}</p>
             <div className="mt-4 flex items-center gap-3">
@@ -72,7 +72,8 @@ export default function Footer({ settings }: { settings: SiteSettingsDTO }) {
               <li><Link href="/product/ginger-powder" className="hover:text-brand-forest">Ginger Powder</Link></li>
               <li><Link href="/product/garlic-powder" className="hover:text-brand-forest">Garlic Powder</Link></li>
               <li><Link href="/product/garlic-ginger-powder" className="hover:text-brand-forest">Ginger Garlic Powder</Link></li>
-              <li><Link href="/product/gift-box-pack-of-3" className="hover:text-brand-forest">Gift Box (Pack of 3)</Link></li>
+              <li><Link href="/product/onion-powder" className="hover:text-brand-forest">Onion Powder</Link></li>
+              <li><Link href="/product/tomato-powder" className="hover:text-brand-forest">Tomato Powder</Link></li>
               <li><Link href="/shop" className="hover:text-brand-forest">Shop All</Link></li>
             </ul>
           </div>

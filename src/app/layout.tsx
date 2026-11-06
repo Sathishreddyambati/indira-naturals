@@ -26,12 +26,14 @@ export const metadata: Metadata = {
     template: "%s | Indira Naturals",
   },
   description:
-    "Indira Naturals makes 100% pure ginger, garlic and ginger garlic powders — made only by drying, with no preservatives and no additives. Pure • Fresh • Natural.",
+    "Indira Naturals makes 100% pure ginger, garlic, ginger garlic, onion and tomato powders — made only by drying, with no preservatives and no additives. Pure • Fresh • Natural.",
   keywords: [
     "Indira Naturals",
     "ginger garlic powder",
     "garlic powder",
     "ginger powder",
+    "onion powder",
+    "tomato powder",
     "no preservatives",
     "natural ingredient powders",
     "Guntur",

@@ -51,6 +51,7 @@ const seedProducts: SeedProduct[] = [
       "/images/products/ginger-front.jpg",
       "/images/products/ginger-back.jpg",
       "/images/products/ginger-combined.jpg",
+      "/images/products/ginger-benefits.jpg",
       "/images/products/ginger-photo.jpg",
       "/images/products/ginger-raw.jpg",
       "/images/products/ginger-sizes.jpg",
@@ -84,6 +85,7 @@ const seedProducts: SeedProduct[] = [
       "/images/products/garlic-front.jpg",
       "/images/products/garlic-back.jpg",
       "/images/products/garlic-combined.jpg",
+      "/images/products/garlic-benefits.jpg",
       "/images/products/garlic-photo.jpg",
       "/images/products/garlic-raw.jpg",
       "/images/products/garlic-display.jpg",
@@ -117,6 +119,7 @@ const seedProducts: SeedProduct[] = [
       "/images/products/ginger-garlic-front.jpg",
       "/images/products/ginger-garlic-back.jpg",
       "/images/products/ginger-garlic-combined.jpg",
+      "/images/products/ginger-garlic-benefits.jpg",
       "/images/products/ginger-garlic-photo.jpg",
       "/images/products/ginger-garlic-raw.jpg",
       "/images/products/ginger-garlic-display.jpg",
@@ -138,57 +141,77 @@ const seedProducts: SeedProduct[] = [
     ],
   },
   {
-    slug: "gift-box-pack-of-3",
-    name: "Gift Box – Pack of 3",
-    shortDescription: "All three variants in one premium gift box.",
-    description:
-      "Our gift box brings all three variants together: Ginger Powder, Garlic Powder and Ginger Garlic Powder. Premium quality natural powders in matte, food-grade, zip-lock pouches, packed in an eco-friendly box (20 × 14 × 21 cm). A thoughtful gift for any kitchen.",
-    category: "Gift Packs",
-    image: "/images/products/gift-box-photo-pack.jpg",
-    gallery: [
-      "/images/products/gift-box-photo-pack.jpg",
-      "/images/products/gift-box.jpg",
-      "/images/products/gift-box-lineup.jpg",
-      "/images/products/all-variants.jpg",
-      "/images/products/ginger-garlic-combined.jpg",
-    ],
-    ingredients: "Ginger Powder (100% Ginger), Garlic Powder (100% Garlic), Ginger Garlic Powder (Ginger, Garlic)",
-    netWeightLabel: "3 pouches × 100 g",
-    usage:
-      "Use Ginger Powder for tea and curries, Garlic Powder for dals and marinades, and Ginger Garlic Powder in place of paste. Add a spoon directly while cooking.",
-    storage: STORAGE,
-    allergen: null,
-    skuPrefix: "IN-BOX3",
-    featured: true,
-    bestseller: false,
-    variants: [{ label: "3 × 100g", grams: 300, price: "549", compare: "597", stock: 40 }],
-  },
-  {
     slug: "onion-powder",
     name: "Onion Powder",
-    shortDescription: "Deep, savoury onion flavour, ready in seconds.",
+    shortDescription: "100% pure onion powder. No chopping, no tears, nothing added.",
     description:
-      "Indira Naturals Onion Powder is made from carefully dried and ground onions, giving you the deep, savoury flavour of onions without any chopping or tears. Ideal for curries, soups, dry rubs and seasoning blends.",
+      "Made from carefully selected fresh onions, sourced and processed to retain their natural goodness, taste and aroma. No preservatives, no artificial colours or chemicals — just pure onion, dried and finely ground. Pure, hygienic and full of nature's goodness for your healthy lifestyle.",
     category: "Powders",
-    image: "/images/products/onion-photo-wide.jpg",
-    gallery: ["/images/products/onion-photo-wide.jpg"],
-    ingredients: "100% Onion",
+    image: "/images/products/onion-photo-pack.jpg",
+    gallery: [
+      "/images/products/onion-photo-pack.jpg",
+      "/images/products/onion-front.jpg",
+      "/images/products/onion-back.jpg",
+      "/images/products/onion-front-back.jpg",
+      "/images/products/onion-combined.jpg",
+      "/images/products/onion-benefits.jpg",
+      "/images/products/onion-photo.jpg",
+    ],
+    ingredients: "Onion Powder",
     netWeightLabel: SIZES,
-    usage: "Use 1 tablespoon in place of one medium onion. Add to curries, soups, dry rubs and marinades.",
-    storage: STORAGE,
+    usage:
+      "Add to your favourite recipes, curries, soups, marinades, sauces and spice blends — no peeling, chopping or crying. 1 kg of raw onion makes about 200 g of powder.",
+    storage:
+      "Store in a cool, dry and hygienic place. Keep away from direct sunlight and moisture. Close the pouch tightly after every use. Use a clean, dry spoon. Best before 12 months from manufacture.",
     allergen: null,
     skuPrefix: "IN-ONI",
-    featured: false,
+    featured: true,
     bestseller: false,
     variants: [
       { label: "50g", grams: 50, price: "89", compare: "109", stock: 110 },
       { label: "100g", grams: 100, price: "159", compare: "189", stock: 95 },
+      { label: "500g", grams: 500, price: "699", stock: 40 },
+      { label: "1kg", grams: 1000, price: "1299", stock: 20 },
+    ],
+  },
+  {
+    slug: "tomato-powder",
+    name: "Tomato Powder",
+    shortDescription: "100% pure tomato powder with natural tangy flavour.",
+    description:
+      "Made from carefully selected fresh tomatoes, sourced and processed to retain their natural goodness, tangy taste and aroma. No preservatives, no artificial colours or chemicals — just pure tomato, dried and finely ground. Pure, hygienic and full of nature's goodness for your healthy lifestyle.",
+    category: "Powders",
+    image: "/images/products/tomato-photo-pack.jpg",
+    gallery: [
+      "/images/products/tomato-photo-pack.jpg",
+      "/images/products/tomato-front.jpg",
+      "/images/products/tomato-back.jpg",
+      "/images/products/tomato-front-back.jpg",
+      "/images/products/tomato-combined.jpg",
+      "/images/products/tomato-benefits.jpg",
+      "/images/products/tomato-photo.jpg",
+    ],
+    ingredients: "Tomato Powder",
+    netWeightLabel: SIZES,
+    usage:
+      "Add to your favourite recipes, curries, soups, sauces, gravies and spice blends — no washing, cutting or pureeing. 1 kg of raw tomato makes about 200 g of powder.",
+    storage:
+      "Store in a cool, dry and hygienic place. Keep away from direct sunlight and moisture. Close the pouch tightly after every use. Use a clean, dry spoon. Best before 12 months from manufacture.",
+    allergen: null,
+    skuPrefix: "IN-TOM",
+    featured: true,
+    bestseller: false,
+    variants: [
+      { label: "50g", grams: 50, price: "99", compare: "119", stock: 85 },
+      { label: "100g", grams: 100, price: "179", compare: "209", stock: 70 },
+      { label: "500g", grams: 500, price: "799", stock: 35 },
+      { label: "1kg", grams: 1000, price: "1499", stock: 20 },
     ],
   },
 ];
 
 // Products no longer sold: hidden from the shop (kept in the database for past orders).
-const RETIRED_SLUGS = ["tomato-powder"];
+const RETIRED_SLUGS = ["gift-box-pack-of-3"];
 
 const seedReviews: Record<string, { name: string; rating: number; title: string; body: string }[]> = {
   "garlic-powder": [

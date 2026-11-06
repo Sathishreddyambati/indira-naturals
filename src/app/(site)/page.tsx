@@ -11,7 +11,7 @@ import { getAllPublishedProducts, getSiteSettings } from "@/db/queries";
 export const metadata: Metadata = {
   title: "Pure Ingredients. Naturally Better.",
   description:
-    "Shop Indira Naturals ginger, garlic and ginger garlic powders — 100% pure, made only by drying, with no preservatives and no additives.",
+    "Shop Indira Naturals ginger, garlic, ginger garlic, onion and tomato powders — 100% pure, made only by drying, with no preservatives and no additives.",
   alternates: { canonical: "/" },
 };
 
