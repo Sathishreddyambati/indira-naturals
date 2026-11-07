@@ -49,9 +49,9 @@ const seedProducts: SeedProduct[] = [
     gallery: [
       "/images/products/ginger-front.jpg",
       "/images/products/ginger-back.jpg",
+      "/images/products/ginger-front-back.jpg",
       "/images/products/ginger-combined.jpg",
       "/images/products/ginger-benefits.jpg",
-      "/images/products/ginger-sizes.jpg",
     ],
     ingredients: "100% Ginger",
     netWeightLabel: SIZES,
@@ -80,9 +80,9 @@ const seedProducts: SeedProduct[] = [
     gallery: [
       "/images/products/garlic-front.jpg",
       "/images/products/garlic-back.jpg",
+      "/images/products/garlic-front-back.jpg",
       "/images/products/garlic-combined.jpg",
       "/images/products/garlic-benefits.jpg",
-      "/images/products/garlic-display.jpg",
     ],
     ingredients: "100% Garlic",
     netWeightLabel: SIZES,
@@ -111,9 +111,9 @@ const seedProducts: SeedProduct[] = [
     gallery: [
       "/images/products/ginger-garlic-front.jpg",
       "/images/products/ginger-garlic-back.jpg",
+      "/images/products/ginger-garlic-front-back.jpg",
       "/images/products/ginger-garlic-combined.jpg",
       "/images/products/ginger-garlic-benefits.jpg",
-      "/images/products/ginger-garlic-display.jpg",
     ],
     ingredients: "Ginger, Garlic",
     netWeightLabel: SIZES,

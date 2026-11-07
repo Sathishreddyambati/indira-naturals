@@ -120,9 +120,9 @@ export default function AboutPage() {
 
           <RevealOnScroll delay={0.1}>
             <div className="glass h-full rounded-2xl p-6">
-              <h3 className="font-serif text-xl text-brand-forest">Three variants, four sizes</h3>
+              <h3 className="font-serif text-xl text-brand-forest">Five powders, four sizes</h3>
               <div className="relative mt-4 aspect-[2/1] overflow-hidden rounded-xl bg-white">
-                <Image src="/images/products/ginger-sizes.jpg" alt="Ginger powder pouches in 50g, 100g, 500g and 1kg" fill sizes="(min-width:1024px) 560px, 90vw" className="object-cover" />
+                <Image src="/images/products/lineup.jpg" alt="Indira Naturals Ginger, Garlic, Ginger Garlic, Onion and Tomato powder pouches" fill sizes="(min-width:1024px) 560px, 90vw" className="object-cover" />
               </div>
               <dl className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
                 {PACK_FACTS.map((f) => (
@@ -132,7 +132,6 @@ export default function AboutPage() {
                   </div>
                 ))}
               </dl>
-              <p className="mt-3 text-sm text-brand-charcoal/70">Gift box with all three variants. Box size: 20 × 14 × 21 cm.</p>
             </div>
           </RevealOnScroll>
         </div>

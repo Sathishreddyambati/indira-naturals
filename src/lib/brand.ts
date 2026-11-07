@@ -65,7 +65,7 @@ export const PACK_FACTS = [
   { title: "Pouch", body: "Matte, food-grade, multi-layer laminated stand-up pouch" },
   { title: "Seal", body: "Heat sealed with a zip lock, printed with food-safe inks" },
   { title: "Shelf life", body: "Best before 12 months from the date of manufacturing" },
-  { title: "Sizes", body: "50 g, 100 g, 500 g and 1 kg in all three variants" },
+  { title: "Sizes", body: "50 g, 100 g, 500 g and 1 kg for every powder" },
 ];
 
 // Certificates & licences. Add the image file to public/images/certificates/ and set `image`.

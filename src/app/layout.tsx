@@ -44,7 +44,7 @@ export const metadata: Metadata = {
       "Ginger and garlic, ready when you are. 100% pure natural powders with nothing added.",
     url: siteUrl,
     siteName: "Indira Naturals",
-    images: ["/images/products/all-variants.jpg"],
+    images: ["/images/products/lineup.jpg"],
     locale: "en_IN",
     type: "website",
   },
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     title: "Indira Naturals | Pure Ingredients. Naturally Better.",
     description:
       "Ginger and garlic, ready when you are. 100% pure natural powders with nothing added.",
-    images: ["/images/products/all-variants.jpg"],
+    images: ["/images/products/lineup.jpg"],
   },
 };
 
