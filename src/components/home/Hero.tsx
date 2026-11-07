@@ -72,7 +72,7 @@ export default function Hero({
             className="relative"
           >
             <Image
-              src="/images/hero-packs.png"
+              src="/images/hero-pouches.png"
               alt="Indira Naturals Ginger, Ginger Garlic and Garlic powder packs"
               width={1200}
               height={900}
