@@ -71,11 +71,12 @@ export default function Hero({
             transition={{ duration: 0.9, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
             className="relative"
           >
-            {/* Brand video: silent, plays once and stops on the last frame */}
+            {/* Brand video: silent, loops */}
             <video
               src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/videos/hero.mp4`}
               poster={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/hero-video-poster.jpg`}
               autoPlay
+              loop
               muted
               playsInline
               preload="auto"
