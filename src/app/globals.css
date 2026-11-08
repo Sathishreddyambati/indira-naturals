@@ -13,8 +13,8 @@
   --color-brand-charcoal: #242820;
   --color-brand-white: #ffffff;
   --color-brand-gold: #c9922f;
-  --color-brand-sand: #cbbd93;
-  --color-brand-sand-light: #e6dcbf;
+  --color-brand-sand: #e5dbcf;
+  --color-brand-sand-light: #f1ebe3;
 
   --shadow-card: 0 12px 32px rgba(23, 77, 42, 0.08);
   --shadow-card-hover: 0 20px 48px rgba(23, 77, 42, 0.14);
@@ -26,7 +26,7 @@
   }
 
   body {
-    /* page background: soft white centre fading to pale green (blocks on top are Sand) */
+    /* page background: soft white centre fading to pale green (intro box and footer are beige) */
     background-color: #f3f7ec;
     background-image: radial-gradient(ellipse at 50% 40%, #ffffff 0%, #f6f9f1 45%, #e9f1de 100%);
     background-attachment: fixed;
@@ -74,9 +74,9 @@
     box-shadow: 0 18px 48px rgba(23, 77, 42, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.9);
   }
 
-  /* Sand block: used only for the home intro box and the footer */
+  /* Beige block: used only for the home intro box and the footer */
   .glass.block-sand {
-    background: rgba(203, 189, 147, 0.9); /* Sand #CBBD93 */
+    background: rgba(229, 219, 207, 0.92); /* Beige #E5DBCF */
     border-color: rgba(255, 250, 235, 0.45);
     box-shadow: 0 18px 48px rgba(70, 55, 20, 0.14), inset 0 1px 0 rgba(255, 250, 235, 0.5);
   }
