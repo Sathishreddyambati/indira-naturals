@@ -34,9 +34,8 @@ type SeedProduct = {
 
 const STORAGE =
   "Store in a cool, dry place. Keep away from moisture and sunlight. Always use a dry spoon. Best before 12 months from the date of manufacturing.";
-const SIZES = "Available in 50 g, 100 g, 500 g & 1 kg zip-lock pouches";
 
-// NOTE: prices are placeholders until confirmed by Indira Naturals.
+// Prices confirmed by Indira Naturals (price list, Nov 2026).
 const seedProducts: SeedProduct[] = [
   {
     slug: "ginger-powder",
@@ -54,7 +53,7 @@ const seedProducts: SeedProduct[] = [
       "/images/products/ginger-benefits.jpg",
     ],
     ingredients: "100% Ginger",
-    netWeightLabel: SIZES,
+    netWeightLabel: "Available in 100 g, 150 g, 200 g, 250 g, 500 g & 1 kg zip-lock pouches",
     usage:
       "Add a spoon directly to curries, soups, marinades, sauces, tea and spice blends — no peeling or grating needed. 1 kg of raw ginger makes about 100 g of powder, so a little goes a long way.",
     storage: STORAGE,
@@ -63,10 +62,12 @@ const seedProducts: SeedProduct[] = [
     featured: true,
     bestseller: true,
     variants: [
-      { label: "50g", grams: 50, price: "109", compare: "129", stock: 100 },
-      { label: "100g", grams: 100, price: "199", compare: "229", stock: 80 },
-      { label: "500g", grams: 500, price: "899", stock: 40 },
-      { label: "1kg", grams: 1000, price: "1699", stock: 20 },
+      { label: "100g", grams: 100, price: "270", stock: 80 },
+      { label: "150g", grams: 150, price: "405", stock: 60 },
+      { label: "200g", grams: 200, price: "540", stock: 60 },
+      { label: "250g", grams: 250, price: "675", stock: 50 },
+      { label: "500g", grams: 500, price: "1350", stock: 40 },
+      { label: "1kg", grams: 1000, price: "2700", stock: 20 },
     ],
   },
   {
@@ -85,7 +86,7 @@ const seedProducts: SeedProduct[] = [
       "/images/products/garlic-benefits.jpg",
     ],
     ingredients: "100% Garlic",
-    netWeightLabel: SIZES,
+    netWeightLabel: "Available in 100 g, 150 g, 200 g, 250 g, 500 g & 1 kg zip-lock pouches",
     usage:
       "Add a spoon to curries, dals, soups, marinades, dry rubs and sauces — no peeling or crushing needed. 1 kg of raw garlic makes about 200 g of powder.",
     storage: STORAGE,
@@ -94,10 +95,12 @@ const seedProducts: SeedProduct[] = [
     featured: true,
     bestseller: true,
     variants: [
-      { label: "50g", grams: 50, price: "99", compare: "119", stock: 120 },
-      { label: "100g", grams: 100, price: "179", compare: "209", stock: 90 },
-      { label: "500g", grams: 500, price: "799", stock: 40 },
-      { label: "1kg", grams: 1000, price: "1499", stock: 20 },
+      { label: "100g", grams: 100, price: "230", stock: 90 },
+      { label: "150g", grams: 150, price: "345", stock: 60 },
+      { label: "200g", grams: 200, price: "460", stock: 60 },
+      { label: "250g", grams: 250, price: "575", stock: 50 },
+      { label: "500g", grams: 500, price: "1150", stock: 40 },
+      { label: "1kg", grams: 1000, price: "2300", stock: 20 },
     ],
   },
   {
@@ -116,7 +119,7 @@ const seedProducts: SeedProduct[] = [
       "/images/products/ginger-garlic-benefits.jpg",
     ],
     ingredients: "Ginger, Garlic",
-    netWeightLabel: SIZES,
+    netWeightLabel: "Available in 100 g, 200 g, 500 g & 1 kg zip-lock pouches",
     usage:
       "Use in place of ginger garlic paste. Add a spoon at the start of cooking for curries, biryani, stir-fries, soups and marinades. Use only what you need — handy for weekly cooking.",
     storage: STORAGE,
@@ -125,10 +128,10 @@ const seedProducts: SeedProduct[] = [
     featured: true,
     bestseller: true,
     variants: [
-      { label: "50g", grams: 50, price: "119", compare: "139", stock: 70 },
-      { label: "100g", grams: 100, price: "219", compare: "249", stock: 60 },
-      { label: "500g", grams: 500, price: "999", stock: 30 },
-      { label: "1kg", grams: 1000, price: "1899", stock: 15 },
+      { label: "100g", grams: 100, price: "300", stock: 60 },
+      { label: "200g", grams: 200, price: "600", stock: 50 },
+      { label: "500g", grams: 500, price: "1300", stock: 30 },
+      { label: "1kg", grams: 1000, price: "2600", stock: 15 },
     ],
   },
   {
@@ -147,7 +150,7 @@ const seedProducts: SeedProduct[] = [
       "/images/products/onion-benefits.jpg",
     ],
     ingredients: "Onion Powder",
-    netWeightLabel: SIZES,
+    netWeightLabel: "Available in 100 g, 200 g, 500 g & 1 kg zip-lock pouches",
     usage:
       "Add to your favourite recipes, curries, soups, marinades, sauces and spice blends — no peeling, chopping or crying. 1 kg of raw onion makes about 200 g of powder.",
     storage:
@@ -157,10 +160,10 @@ const seedProducts: SeedProduct[] = [
     featured: true,
     bestseller: false,
     variants: [
-      { label: "50g", grams: 50, price: "89", compare: "109", stock: 110 },
-      { label: "100g", grams: 100, price: "159", compare: "189", stock: 95 },
-      { label: "500g", grams: 500, price: "699", stock: 40 },
-      { label: "1kg", grams: 1000, price: "1299", stock: 20 },
+      { label: "100g", grams: 100, price: "200", stock: 95 },
+      { label: "200g", grams: 200, price: "370", stock: 60 },
+      { label: "500g", grams: 500, price: "750", stock: 40 },
+      { label: "1kg", grams: 1000, price: "1300", stock: 20 },
     ],
   },
   {
@@ -179,7 +182,7 @@ const seedProducts: SeedProduct[] = [
       "/images/products/tomato-benefits.jpg",
     ],
     ingredients: "Tomato Powder",
-    netWeightLabel: SIZES,
+    netWeightLabel: "Available in 100 g, 200 g, 500 g & 1 kg zip-lock pouches",
     usage:
       "Add to your favourite recipes, curries, soups, sauces, gravies and spice blends — no washing, cutting or pureeing. 1 kg of raw tomato makes about 200 g of powder.",
     storage:
@@ -189,10 +192,10 @@ const seedProducts: SeedProduct[] = [
     featured: true,
     bestseller: false,
     variants: [
-      { label: "50g", grams: 50, price: "99", compare: "119", stock: 85 },
-      { label: "100g", grams: 100, price: "179", compare: "209", stock: 70 },
-      { label: "500g", grams: 500, price: "799", stock: 35 },
-      { label: "1kg", grams: 1000, price: "1499", stock: 20 },
+      { label: "100g", grams: 100, price: "230", stock: 70 },
+      { label: "200g", grams: 200, price: "390", stock: 50 },
+      { label: "500g", grams: 500, price: "760", stock: 35 },
+      { label: "1kg", grams: 1000, price: "1400", stock: 20 },
     ],
   },
 ];
@@ -302,7 +305,7 @@ async function main() {
         price: v.price,
         comparePrice: v.compare ?? null,
         stock: v.stock,
-        isDefault: sp.variants.length === 1 ? true : i === 1,
+        isDefault: i === 0,
         sortOrder: i,
       };
       await db
