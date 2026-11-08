@@ -71,14 +71,17 @@ export default function Hero({
             transition={{ duration: 0.9, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
             className="relative"
           >
-            <Image
-              src="/images/hero-pouches.png"
-              alt="Indira Naturals Ginger, Ginger Garlic and Garlic powder packs"
-              width={1200}
-              height={900}
-              priority
-              sizes="(min-width: 1024px) 600px, 92vw"
-              className="h-auto w-full"
+            {/* Brand video: silent, autoplays and loops */}
+            <video
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/videos/hero.mp4`}
+              poster={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/hero-video-poster.jpg`}
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
+              aria-label="Indira Naturals pouch surrounded by fresh garlic, ginger and tomatoes"
+              className="aspect-[624/352] w-full rounded-2xl object-cover shadow-[0_20px_50px_rgba(23,77,42,0.25)]"
             />
           </motion.div>
         </div>
