@@ -160,6 +160,8 @@ export async function POST(req: Request) {
       await db.update(coupons).set({ usedCount: sql`${coupons.usedCount} + 1` }).where(eq(coupons.id, coupon.id));
     }
     await db.update(orders).set({ status: "confirmed" }).where(eq(orders.id, order.id));
+    try {
+  await createIndiraOrder(orderNumber, {
       await createIndiraOrder(orderNumber, {
     customerName: input.customerName,
     email: input.email.toLowerCase(),
@@ -200,6 +202,10 @@ export async function POST(req: Request) {
       },
     ],
   });
+          });
+} catch (firestoreError) {
+  console.error("COD Firestore sync failed:", firestoreError);
+      }
 
     return NextResponse.json({
       orderNumber,
