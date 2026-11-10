@@ -67,20 +67,48 @@ export async function getIndiraSettings() {
   return doc.data();
 }
 
+// Create or synchronize an order.
+// The order number is used as the Firestore document ID.
 export async function createIndiraOrder(
-  orderId: string,
+  orderNumber: string,
   orderData: DocumentData
 ) {
   const db = getAdminDb();
 
   await db
     .collection(COLLECTIONS.orders)
-    .doc(orderId)
-    .create({
-      ...orderData,
-      createdAt: FieldValue.serverTimestamp(),
-      updatedAt: FieldValue.serverTimestamp(),
-    });
+    .doc(orderNumber)
+    .set(
+      {
+        ...orderData,
+        orderNumber,
+        createdAt: FieldValue.serverTimestamp(),
+        updatedAt: FieldValue.serverTimestamp(),
+      },
+      { merge: true }
+    );
 
-  return orderId;
+  return orderNumber;
+}
+
+// Update an existing order or synchronize missing fields.
+export async function updateIndiraOrder(
+  orderNumber: string,
+  orderData: DocumentData
+) {
+  const db = getAdminDb();
+
+  await db
+    .collection(COLLECTIONS.orders)
+    .doc(orderNumber)
+    .set(
+      {
+        ...orderData,
+        orderNumber,
+        updatedAt: FieldValue.serverTimestamp(),
+      },
+      { merge: true }
+    );
+
+  return orderNumber;
 }
