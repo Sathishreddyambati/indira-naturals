@@ -161,7 +161,6 @@ export async function POST(req: Request) {
     }
     await db.update(orders).set({ status: "confirmed" }).where(eq(orders.id, order.id));
     try {
-  await createIndiraOrder(orderNumber, {
       await createIndiraOrder(orderNumber, {
     customerName: input.customerName,
     email: input.email.toLowerCase(),
