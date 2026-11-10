@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { db } from "@/db";
 import { orderItems, orders } from "@/db/schema";
 import { requireAdmin } from "@/lib/require-admin";
+import { updateIndiraOrder } from "@/lib/indira-firestore";
 import { adminOrderUpdateSchema } from "@/lib/validation";
 import { eq } from "drizzle-orm";
 
