@@ -160,6 +160,46 @@ export async function POST(req: Request) {
       await db.update(coupons).set({ usedCount: sql`${coupons.usedCount} + 1` }).where(eq(coupons.id, coupon.id));
     }
     await db.update(orders).set({ status: "confirmed" }).where(eq(orders.id, order.id));
+      await createIndiraOrder(orderNumber, {
+    customerName: input.customerName,
+    email: input.email.toLowerCase(),
+    phone: input.phone,
+
+    addressLine1: input.addressLine1,
+    addressLine2: input.addressLine2 || "",
+    city: input.city,
+    state: input.state,
+    pincode: input.pincode,
+    deliveryInstructions: input.deliveryInstructions || "",
+
+    items: computedLines,
+
+    subtotal,
+    discount,
+    shipping,
+    total,
+
+    couponCode: coupon?.code || null,
+
+    paymentMethod: "cod",
+    paymentStatus: "pending",
+    status: "confirmed",
+
+    trackingNumber: null,
+
+    statusHistory: [
+      {
+        status: "pending",
+        note: "Order placed",
+        createdAt: new Date().toISOString(),
+      },
+      {
+        status: "confirmed",
+        note: "Order confirmed",
+        createdAt: new Date().toISOString(),
+      },
+    ],
+  });
 
     return NextResponse.json({
       orderNumber,
