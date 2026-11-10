@@ -37,5 +37,22 @@ export async function PATCH(req: Request, { params }: { params: Promise<{ id: st
   if (parsed.data.trackingNumber !== undefined) updates.trackingNumber = parsed.data.trackingNumber;
 
   await db.update(orders).set(updates).where(eq(orders.id, Number(id)));
-  return NextResponse.json({ ok: true });
+
+// Get the order number used as the Firestore document ID.
+const [updatedOrder] = await db
+  .select({ orderNumber: orders.orderNumber })
+  .from(orders)
+  .where(eq(orders.id, Number(id)))
+  .limit(1);
+
+// Sync admin changes to Firestore.
+if (updatedOrder?.orderNumber) {
+  try {
+    await updateIndiraOrder(updatedOrder.orderNumber, updates);
+  } catch (firestoreError) {
+    console.error("Admin order Firestore sync failed:", firestoreError);
+  }
+}
+
+return NextResponse.json({ ok: true });
 }
